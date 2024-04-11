@@ -1,0 +1,206 @@
+//Button Styling Go!
+.btn-form-submit {
+  width: 180px;
+  height: 70px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #004A80;
+  background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+  box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+  background-color: #F2DA56;
+  border-radius: 6px;
+  outline: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 180px;
+  margin-left: 20px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    margin: 12px 0 0 0;
+  }
+
+  // In mode hover change the background-color to #F2DA56
+  //change the font-color to #004A80;
+  &:hover {
+    background-image: none;
+    color: #004A80 !important;
+    background-color: #F2DA56 !important;
+  }
+
+  //add a style when the user click the button
+  &:active {
+    background-color: #F6BC25 !important;
+    color: #004A80 !important;
+    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+    border: none;
+
+  }
+
+  // remove the black border when click the button
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+//Placeholder email-search-input that allows a email address 
+.input-group {
+  .form-control {
+    height: 70px;
+    background: #FFF;
+    box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 3px !important;
+    font-size: 22px;
+
+    &::placeholder {
+      color: #9B9B9B;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      height: 50px;
+    }
+
+
+  }
+
+  &.error>.form-control {
+    border: 3px solid #DC0015;
+    border-radius: 3px 3px 0 0 !important;
+    width: 100%;
+  }
+}
+
+.form-subtext {
+  font-size: 16px;
+  color: #FFF;
+  margin: 0 0 0 15px;
+  line-height: normal;
+}
+
+.error-msg {
+  display: none;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+
+}
+
+//error message
+.input-group.error .error-msg {
+  display: block;
+  position: absolute;
+  bottom: -30px;
+  margin: 0px;
+  padding: 4px 12px;
+  background: #DC0015;
+  color: #FFF;
+  border-radius: 0 0 3px 3px;
+  font-size: 16px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .input-group.error .error-msg {
+    width: 270px;
+  }
+}
+
+.input-group.error {
+  margin-bottom: 40px;
+}
+
+.input-group.error .error-msg {
+  display: block;
+
+}
+//styling for <p> type search
+.typeSearchcontainer {
+  display: flex;
+  align-items: center;
+}
+
+.typeSearch {
+  font-size: 16px;
+  color: #FFF;
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .typeSearch {
+    display: none;
+  }
+}
+
+//styling buttons type of search
+//In base form the button only have border without backgroud
+.button-common-styles {
+  font-size: 14px;
+  font-weight: bold;
+  color: #F6BC25 !important;
+  border: 4px solid #F6BC25 !important;
+  background-color: #004A80;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 5px 0px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  margin-bottom: 25px;
+  margin-left: 10px;
+  height: 40px;
+  width: 160px;
+  max-width: 200px;
+  white-space: nowrap;
+}
+
+//Styling button emailSearch
+.button-emailSearch {
+  @extend .button-common-styles;
+
+  &:focus {
+    color: #004A80 !important;
+    background-color: #F6BC25;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #F6BC25;
+    }
+  }
+}
+
+//Styling button phoneSearch
+.button-phoneSearch {
+  @extend .button-common-styles;
+
+  &:focus {
+    color: #004A80 !important;
+    background-color: #F6BC25;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #F6BC25;
+    }
+  }
+}
